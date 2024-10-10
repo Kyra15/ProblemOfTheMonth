@@ -14,11 +14,13 @@ def init():
     if g_max != 0:
         maxg_list = [g for g in str_list if g.count("G") == g_max]
 
-    s_max = max(s.count("S") for s in maxg_list)
-    if s_max != 0:
-        final = [s for s in maxg_list if s.count("S") == s_max]
-    else:
-        final = maxg_list
+    final = []
+    if maxg_list:
+        s_max = max(s.count("S") for s in maxg_list)
+        if s_max != 0:
+            final = [s for s in maxg_list if s.count("S") == s_max]
+        else:
+            final = maxg_list
 
     print(final)
 
