@@ -1,11 +1,14 @@
 def init():
+    num_str = input("Number of strings: ")
     try:
-        num_str = int(input("Number of strings: "))
+        num_str = int(num_str)
     except Exception as e:
-        print("You can't do that!!")
+        print(e, "\nYou can't do that!!")
+        return
 
     if num_str == 0:
         print("You can't do that!!")
+        return
 
     str_list = []
     for i in range(num_str):
