@@ -1,5 +1,8 @@
 def init():
-    num_str = int(input("Number of strings: "))
+    try:
+        num_str = int(input("Number of strings: "))
+    except Exception as e:
+        print("You can't do that!!")
 
     if num_str == 0:
         print("You can't do that!!")
